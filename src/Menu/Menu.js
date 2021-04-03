@@ -9,16 +9,21 @@ height: 1000px;
 margin: px 400px 50px 20px; 
 `
 export function Menu(){
-    return <MenuStyled>
-        <h1>Menu</h1>
+    console.log(foods)
+    return (
+    <MenuStyled>
+        {Object.entries(foods).map(([sectionName, foods]) => (
+        <>
+        <h1>{sectionName}</h1>
         <FoodGrid>
         {foods.map(food=> (
             <Food img={food.img}>
-                <FoodLabel>
-                {food.name}
-                </FoodLabel>
+                <FoodLabel>{food.name}</FoodLabel>
             </Food>
         ))}
         </FoodGrid>
+        </>
+        ))}
     </MenuStyled>
-}
+    )
+};
