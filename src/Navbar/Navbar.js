@@ -8,6 +8,7 @@ padding: 10px;
 background-color: ${pizzaRed};
 position: fixed;
 width: 100%;
+z-index: 999;
 
 ` 
 const Logo = styled(Title)`
@@ -18,6 +19,5 @@ text-shadow: 2px 2px 4px #380502;
 export function Navbar(){
     return <NavbarStyled>
         <Logo>SliceLine</Logo>
-        Hello Navbar
     </NavbarStyled>;
 }
