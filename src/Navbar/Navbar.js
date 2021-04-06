@@ -17,7 +17,10 @@ color: white;
 text-shadow: 2px 2px 4px #380502;
 `
 export function Navbar(){
-    return <NavbarStyled>
-        <Logo>SliceLine</Logo>
-    </NavbarStyled>;
+    return( 
+    <NavbarStyled>
+        <Logo>SliceLine <span role="img" aria-label="pizza slice">❤</span></Logo>
+
+    </NavbarStyled>
+    )
 }
