@@ -9,9 +9,10 @@ height: 1000px;
 margin: px 400px 50px 20px; 
 `
 export function Menu(){
-    console.log(foods)
+    //console.log(foods)
     return (
     <MenuStyled>
+        {/* entries create arr of key and value */}
         {Object.entries(foods).map(([sectionName, foods]) => (
         <>
         <h1>{sectionName}</h1>
