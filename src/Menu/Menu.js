@@ -21,7 +21,7 @@ export function Menu({setOpenFood}){
             <Food 
             img={food.img} 
             onClick={()=>{
-                setOpenFood(food.name);
+                setOpenFood(food);
             }}>
                 <FoodLabel>{food.name}</FoodLabel>
             </Food>
