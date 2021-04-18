@@ -34,6 +34,13 @@ const OrderItem = styled.div`
   justify-content: space-between;
 `;
 export function Order({ orders }) {
+  const subtotal = orders.reduce((total, order) => {
+    return total + getPrice(order);
+  }, 0);
+
+  const tax = subtotal * 0.7;
+  const total = subtotal + tax;
+
   return (
     <OrderStyled>
       {orders.length === 0 ? (
@@ -52,6 +59,23 @@ export function Order({ orders }) {
           ))}
         </OrderContent>
       )}
+      <OrderContainer>
+        <OrderItem>
+          <div />
+          <div>sub-total</div>
+          <div>{formatPrice(subtotal)}</div>
+        </OrderItem>
+        <OrderItem>
+          <div />
+          <div>tax</div>
+          <div>{formatPrice(tax)}</div>
+        </OrderItem>
+        <OrderItem>
+          <div />
+          <div>total</div>
+          <div>{formatPrice(total)}</div>
+        </OrderItem>
+      </OrderContainer>
       <DialogFooter>
         <ConfirmButton>Check Out</ConfirmButton>
       </DialogFooter>
