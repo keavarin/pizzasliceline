@@ -53,6 +53,12 @@ export const foodItems = [
     section: "Burger",
     price: 4,
   },
+  {
+    price: 1,
+    name: "Soda",
+    section: "Drinks",
+    choices: ["Coke", "Sprite", "Root Beer"],
+  },
 ];
 
 //เลือกเอาแต่ section ของfooditems เอามาreduce [{section: Burger},{section: Pizza}]
